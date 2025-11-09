@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/ai_style.css">
+    <title>Banana Disease Diagnosis</title>
+    <style>
+    </style>
+</head>
+<body>
+
+<header>Banana Disease Diagnosis</header>
+<button
+        class="back-button"
+        onclick="location.href='../menus/index.html'"
+>
+    <
+</button>
+<div class="container">
+    <!-- Upload Area -->
+    <label class="upload-area" for="fileUpload">
+        <p>Click or Drag an Image Here</p>
+        <img id="preview" src="" alt="" style="display: none;">
+        <input type="file" id="fileUpload" accept="image/*">
+    </label>
+
+    <!-- Diagnose Button -->
+    <button class="diagnose-btn">Diagnose</button>
+</div>
+<div id="messageBox" class="message-box" style="display: none;">
+    Diagnosis result will appear here.
+</div>
+
+
+
+<script src="../../js_files/logic.js" defer></script>
+
+</body>
+</html>
