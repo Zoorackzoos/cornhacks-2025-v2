@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central America Facts</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="background-non-menu"></div>
+
+<header>
+    <div class="top-bar">
+        <button class="back-button" onclick="location.href='fun.html'">&gt;</button>
+        <h1>Central America Facts</h1>
+    </div>
+</header>
+
+<main>
+    <section class="fact-section">
+        <p class="subtitle">Choose a country to learn a fun fact!</p>
+        <select id="central-country" class="dropdown">
+            <option value="">-- Select a Country --</option>
+            <option value="Belize">Belize</option>
+            <option value="Costa Rica">Costa Rica</option>
+            <option value="El Salvador">El Salvador</option>
+            <option value="Guatemala">Guatemala</option>
+            <option value="Honduras">Honduras</option>
+            <option value="Nicaragua">Nicaragua</option>
+            <option value="Panama">Panama</option>
+        </select>
+
+        <div id="fact-output" class="fact-box"></div>
+    </section>
+</main>
+
+<script>
+    const facts = {
+        "Belize": "Belize is the only Central American country where English is the official language!",
+        "Costa Rica": "Costa Rica has no standing army since 1949.",
+        "El Salvador": "El Salvador is known as the 'Land of Volcanoes'.",
+        "Guatemala": "Guatemala is home to ancient Maya ruins like Tikal.",
+        "Honduras": "Honduras hosts the second-largest coral reef in the world.",
+        "Nicaragua": "Nicaragua has both freshwater and saltwater sharks!",
+        "Panama": "Panama’s canal connects the Atlantic and Pacific oceans."
+    };
+
+    document.getElementById("central-country").addEventListener("change", (e) => {
+        const factBox = document.getElementById("fact-output");
+        factBox.textContent = facts[e.target.value] || "";
+    });
+</script>
+</body>
+</html>

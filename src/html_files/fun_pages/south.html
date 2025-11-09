@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South America Facts</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="background-non-menu"></div>
+
+<header>
+    <div class="top-bar">
+        <button class="back-button" onclick="location.href='fun.html'">&gt;</button>
+        <h1>South America Facts</h1>
+    </div>
+</header>
+
+<main>
+    <section class="fact-section">
+        <p class="subtitle">Choose a country to learn a fun fact!</p>
+        <select id="south-country" class="dropdown">
+            <option value="">-- Select a Country --</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Brazil">Brazil</option>
+            <option value="Chile">Chile</option>
+            <option value="Colombia">Colombia</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Peru">Peru</option>
+            <option value="Venezuela">Venezuela</option>
+        </select>
+
+        <div id="fact-output" class="fact-box"></div>
+    </section>
+</main>
+
+<script>
+    const facts = {
+        "Argentina": "Argentina is the birthplace of tango dancing.",
+        "Brazil": "Brazil is home to the Amazon Rainforest, the largest in the world.",
+        "Chile": "Chile has one of the driest deserts on Earth: the Atacama Desert.",
+        "Colombia": "Colombia is the world's largest producer of emeralds.",
+        "Ecuador": "Ecuador is named after the equator that runs through it.",
+        "Peru": "Peru was home to the Inca Empire and Machu Picchu.",
+        "Venezuela": "Venezuela has Angel Falls, the world’s tallest waterfall."
+    };
+
+    document.getElementById("south-country").addEventListener("change", (e) => {
+        const factBox = document.getElementById("fact-output");
+        factBox.textContent = facts[e.target.value] || "";
+    });
+</script>
+</body>
+</html>
