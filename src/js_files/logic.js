@@ -13,10 +13,42 @@ fileInput.addEventListener('change', () => {
     reader.readAsDataURL(file);
   }
 });
-document.querySelector('.diagnose-btn').addEventListener('click', () => {
-  const box = document.getElementById("messageBox");
-  typeEachCharacter('Processing image... please wait.',box)
-  box.style.display = "block";
+document.querySelector('.diagnose-btn').addEventListener('click', async () => {
+    const fileInput = document.getElementById('fileUpload');
+    const file = fileInput.files[0];
+    const messageBox = document.getElementById('messageBox');
+
+    if (!file) {
+        messageBox.style.display = 'block';
+        messageBox.innerText = 'Please upload an image first.';
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+        const response = await fetch('http://localhost:5000/predict', {
+            method: 'POST',
+            body: formData
+        });
+
+        const result = await response.json();
+        let prediction_name;
+        if (result.prediction == 0) {
+          prediction_name = "Black Sigatoka";
+        } else if (result.prediction == 1) {
+          prediction_name = "Fusarium Wilt";
+        } else {
+          prediction_name = "Healthy";
+        }
+        messageBox.style.display = 'block';
+        messageBox.innerText = `Diagnosis: ${prediction_name}`;
+    } catch (error) {
+        messageBox.style.display = 'block';
+        messageBox.innerText = 'Error during diagnosis. Please try again.';
+        console.error(error);
+    }
 });
 
 function typeEachCharacter(message, container, interval = 20) {
