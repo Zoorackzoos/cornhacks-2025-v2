@@ -23,7 +23,15 @@ gdp vr.s bananas
  */
 
 import {calculateBananas} from "./calculateBananas.js";
-import {belizeGDP, costaRicaGDP, guatemalaGDP, hondurasGDP, nicaraguaGDP, panamaGDP} from "./central_vars.js";
+import {
+    belizeGDP,
+    costaRicaGDP,
+    elSalvadorGDP,
+    guatemalaGDP,
+    hondurasGDP,
+    nicaraguaGDP,
+    panamaGDP
+} from "./central_vars.js";
 
 function CeAmfindGDPinQuestion(countryInQuestion, tabAmount = "\t")
 {
@@ -48,6 +56,10 @@ function CeAmfindGDPinQuestion(countryInQuestion, tabAmount = "\t")
     {
         return belizeGDP;
     }
+    else if (countryInQuestion === "El Salvador")
+    {
+        return elSalvadorGDP;
+    }
     else if (countryInQuestion === "Nicaragua")
     {
         return nicaraguaGDP;
@@ -68,7 +80,7 @@ function centralAmCalculateBananas(tabAmount = "\t")
     console.log(tabAmount + "\tcountryInQuestion = " + countryInQuestion);
     console.log(tabAmount + "\tyearInQuestion = " + yearInQuestion);
 
-    const GDPinQuestion = CeAmfindGDPinQuestion(countryInQuestion);
+    const GDPinQuestion = CeAmfindGDPinQuestion(countryInQuestion,tabAmount+"\t");
 
     document.getElementById("CeAm-banana-v-gdp-calculator-output-label").innerText = calculateBananas(countryInQuestion, yearInQuestion, GDPinQuestion, tabAmount + "\t");
 }

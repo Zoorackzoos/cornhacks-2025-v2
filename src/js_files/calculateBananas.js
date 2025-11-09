@@ -4,7 +4,9 @@ import {bananaPriceUSDperKg} from "./banana_var.js";
 export function calculateBananas(country, year, countryGDDictionary, tabAmount="\t") {
     console.log(tabAmount+"calculateBananas");
     const gdpBillions = countryGDDictionary[year]; // GDP in billions USD
+    console.log(tabAmount+"\tgdpBillions = "+gdpBillions);
     const pricePerKg = bananaPriceUSDperKg[year]; // USD/kg
+    console.log(tabAmount+"\tpricePerKg = "+pricePerKg);
     const gdpDollars = gdpBillions * 1_000_000_000;
     console.log(tabAmount+"\tgdpDollars = "+gdpDollars);
     const bananasKg = gdpDollars / pricePerKg;

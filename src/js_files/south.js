@@ -64,7 +64,7 @@ function southAmCalculateBananas(tabAmount="\t")
     console.log(tabAmount+"countryInQuestion = "+countryInQuestion);
     console.log(tabAmount+"yearInQuestion = "+yearInQuestion);
 
-    const GDPinQuestion = SoAmfindGDPinQuestion(countryInQuestion);
+    const GDPinQuestion = SoAmfindGDPinQuestion(countryInQuestion,tabAmount+"\t");
 
     document.getElementById("SoAm-banana-v-gdp-calculator-output-label").innerText = calculateBananas(countryInQuestion, yearInQuestion, GDPinQuestion, tabAmount + "\t");
 }
