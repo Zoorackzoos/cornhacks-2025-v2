@@ -15,10 +15,13 @@ To run the project:
 
 ```bash
 
-# Navigate into the cornhacks-2025-v2 directory and run
+# Clone the repository
+git clone https://github.com/Zoorackzoos/cornhacks-2025-v2.git
+
+# Navigate into the cornhacks-2025-v2 directory and run:
 pip install -r requirements.txt
 
-# Execute app.py in the server dircetory
+# Execute app.py in the server directory
 python server/app.py
 
 # Execute index.html
