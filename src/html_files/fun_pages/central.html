@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South America Facts</title>
+    <title>Central America Facts</title>
     <link rel="stylesheet" href="../../../css/fun_pages.css">
 </head>
 <body class="fun-page-body">
@@ -20,16 +20,17 @@
 
         <h1>
             <u>
-                South America Fun page
+                Central America Fun page
             </u>
         </h1>
     </div>
 
     <div class="sides-div">
         <div class="left-side">
+
             <div class="text-blurb-div">
                 <h1>
-                    About South America
+                    About Central America
                 </h1>
                 <p>
                     Central america is all of the countries south of the United States <br>
@@ -81,9 +82,9 @@
                     if...
                 </label>
                 <br>
-                <label for="CA-country-selection-dropdown"></label>
+                <label for="SoAm-banana-v-gdp-calculator-country-selection"></label>
                     <select
-                        id="CA-country-selection-dropdown"
+                        id="SoAm-banana-v-gdp-calculator-country-selection"
                         class="banana-v-gdp-calculator-input"
                     >
                         <option value="Panama">Panama</option>
@@ -106,6 +107,7 @@
                         min="1960"
                         max="2023"
                         placeholder="enter year here"
+                        id="CeAm-banana-v-gdp-calculator-year-input"
                     >
                 </label>
                 <br>
@@ -113,13 +115,16 @@
                     they would get...
                 </label>
                 <br>
-                <label class="banana-v-gdp-calculator-output-label">
+                <label class="banana-v-gdp-calculator-output-label" id="So-Am-banana-v-gdp-calculator-output-label">
                     The answer of your calculations will show up here!
                 </label>
                 <br>
                 <label class="banana-v-gdp-calculator-div-flavor-label">
                     ...bananas 🍌🍌🍌🍌🍌
                 </label>
+                <button onclick="centralAmCalculateBananas()" class="banana-v-gdp-calculator-div-calculate-button">
+                    Calculate
+                </button>
             </div>
         </div>
         <div class="right-side">
