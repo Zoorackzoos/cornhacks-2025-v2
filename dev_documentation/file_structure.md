@@ -2,6 +2,14 @@
 ```
 project_root/    
 ├─ assets/
+    ├─ test_images                  ← Images to test the CNN
+        └─ test1.jpg                ← Images to test the CNN
+        └─ test2.jpg                ← Images to test the CNN
+        └─ test3.jpg                ← Images to test the CNN
+        └─ test4.jpg                ← Images to test the CNN
+        └─ test5.jpg                ← Images to test the CNN
+        └─ test6.jpg                ← Images to test the CNN
+        
     └─ jungle-background.jpg        ← Background set as a Jungle
     └─ map_bg.png                   ← Background set as the Map of South and Central America
     └─ map_central.png              ← Image of Central America
@@ -23,12 +31,12 @@ project_root/
 
 ├─ src/
     └─ html_files/
-        └─ ai-page
+        └─ ai-page/
             └─ ai_web.html          ← AI Page
-        └─ fun_pages
+        └─ fun_pages/
             └─ central.html         ← Central America Fun Page (top-right)
             └─ south.html           ← South America Fun Page (bottom-right)
-        └─ menus
+        └─ menus/
             └─ central.html         ← Central America Fun Page (top-right)
             ├─ index.html           ← Main menu (bottom-left page)     
     └─ js_files/
