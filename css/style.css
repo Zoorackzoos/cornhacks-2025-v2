@@ -20,33 +20,6 @@
     z-index: -1;
 }
 
-/*
-central & south html files
- */
-    .non-menu-body
-    {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: dimgray;
-        background-size: cover;
-        background-position: center;
-        filter: brightness(0.8);
-        z-index: -1;
-        padding: 30px;
-    }
-
-    .non-menu-body h1,
-    .non-menu-body h2,
-    .non-menu-body p
-    {
-        color: white;
-        background-color: black;
-        text-align: left;
-    }
-
 /* HEADER */
 header {
     text-align: center;
@@ -129,20 +102,20 @@ main {
 }
 
 /* BACK BUTTON */
-.back-button {
-    position: absolute;
-    left: 20px;
-    background-color: crimson;
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
+    .back-button {
+        position: absolute;
+        left: 20px;
+        background-color: crimson;
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+    }
 
 .back-button:hover {
     background-color: rgb(200, 0, 0);

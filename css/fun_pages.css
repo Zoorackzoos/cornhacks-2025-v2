@@ -1,0 +1,111 @@
+.fun-page-body {
+    background-color: #464646;
+    margin: 0;
+}
+
+/*
+page top
+ */
+    .page-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;   /* <-- this aligns items vertically */
+        gap: 1rem;             /* optional, adds space between button and text */
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    .back-button {
+        margin-left: 20px;
+        margin-top: 20px;
+        border: none;
+        background-color: crimson;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+/*
+sides
+ */
+    .sides-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; /* pushes left and right sides apart */
+        align-items: center;            /* vertically centers them */
+        padding: 1rem;                  /* optional: adds breathing room */
+        color: white;
+    }
+
+    /*
+    right side
+     */
+        .right-side
+        {
+            width: 600px;           /* how wide the box is */
+            height: 475px;          /* how tall it is */
+        }
+
+        .right-side img {
+            width: 100%;    /* scales with container */
+            height: 100%;  /* keeps aspect ratio */
+        }
+
+    /*
+    left side
+     */
+
+        /*
+        text blurb
+         */
+        .text-blurb-div
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 40px;
+            width: 600px;           /* how wide the box is */
+            height: 200px;          /* how tall it is */
+            overflow-y: auto;       /* adds a vertical scrollbar if content overflows */
+            padding: 1rem;          /* space inside the box */
+            border-radius: 10px;    /* rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle shadow */
+            line-height: 1.5;       /* better text readability */
+        }
+
+    /*
+    banana v gdp calculator
+     */
+        .banana-v-gdp-calculator-div
+        {
+            background-color: black;
+            padding: 20px;
+            width: 632px;           /* how wide the box is */
+            height: 200px;          /* how tall it is */
+            overflow-y: auto;       /* adds a vertical scrollbar if content overflows */
+        }
+
+        .banana-v-gdp-calculator-div-flavor-label
+        {
+            margin-left: 20px;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .banana-v-gdp-calculator-input
+        {
+            width: 200px;
+            height: 50px;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        .banana-v-gdp-calculator-output-label
+        {
+            margin-left: 20px;
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: yellow;
+        }
